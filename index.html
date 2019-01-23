@@ -5,25 +5,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title','Random Mr. Rogers Quotes to Uplift Your Day')</title>
-        <link rel="canonical" href="" />
+        <title>Random Mr. Rogers Quotes to Uplift Your Day</title>
+        <link rel="canonical" href="https://ryanburst.github.io/randomrogers/" />
 
         <meta name="description" content="Often when you think you're at the end of something, you're at the beginning of something else."/>
-        <meta itemprop="name" content="@yield('title','Random Mr. Rogers Quotes to Uplift Your Day')">
+        <meta itemprop="name" content="Random Mr. Rogers Quotes to Uplift Your Day">
         <meta itemprop="description" content="Often when you think you're at the end of something, you're at the beginning of something else.">
-        <meta itemprop="image" content="rogers.jpg">
+        <meta itemprop="image" content="https://ryanburst.github.io/randomrogers/rogers.jpg">
 
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content="@yield('title','Random Mr. Rogers Quotes to Uplift Your Day')" />
+        <meta property="og:title" content="Random Mr. Rogers Quotes to Uplift Your Day" />
         <meta property="og:description" content="Often when you think you're at the end of something, you're at the beginning of something else." />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="/rogers.jpg" />
+        <meta property="og:url" content="https://ryanburst.github.io/randomrogers/" />
+        <meta property="og:image" content="https://ryanburst.github.io/randomrogers/rogers.jpg" />
         <meta property="og:site_name" content="Random Rogers" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content="Often when you think you're at the end of something, you're at the beginning of something else." />
-        <meta name="twitter:title" content="@yield('title','Random Mr. Rogers Quotes to Uplift Your Day')" />
-        <meta name="twitter:image" content="/rogers.jpg">
+        <meta name="twitter:title" content="Random Mr. Rogers Quotes to Uplift Your Day" />
+        <meta name="twitter:image" content="https://ryanburst.github.io/randomrogers/rogers.jpg">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,600" rel="stylesheet" type="text/css">
@@ -131,134 +131,612 @@
         </div>
         <div id="scripts">
             <script>
+                function array_intersect(a, b) {
+                    var t;
+                    if (b.length > a.length) t = b, b = a, a = t; // indexOf to loop over shorter
+                    return a.filter(function (e) {
+                        if (b.indexOf(e) !== -1) return true;
+                    });
+                }
                 var quotes = [
                     {
                         "quote": "When I say it's you I like, I'm talking about that part of you that knows that life is far more than anything you can ever see or hear or touch. That deep part of you that allows you to stand for those things without which humankind cannot survive. Love that conquers hate, peace that rises triumphant over war, and justice that proves more powerful than greed.",
-                        "tags": "friends, friendship, love, peace"
+                        "tags": [
+                            "friends",
+                            "friendship",
+                            "love",
+                            "peace",
+                            "election2016"
+                        ]
                     },
                     {
                         "quote": "Part of the problem with the word 'disabilities' is that it immediately suggests an inability to see or hear or walk or do other things that many of us take for granted. But what of people who can't feel? Or talk about their feelings? Or manage their feelings in constructive ways? What of people who aren't able to form close and strong relationships? And people who cannot find fulfillment in their lives, or those who have lost hope, who live in disappointment and bitterness and find in life no joy, no love? These, it seems to me, are the real disabilities.",
-                        "tags": "bitterness, disability, disappointment, emptiness, feelings, fulfillment, happiness, hope, joy, love, potential, relationships, self-awareness"
+                        "tags": [
+                            "bitterness",
+                            "disability",
+                            "disappointment",
+                            "emptiness",
+                            "feelings",
+                            "fulfillment",
+                            "happiness",
+                            "hope",
+                            "joy",
+                            "love",
+                            "potential",
+                            "relationships",
+                            "self-awareness"
+                        ]
                     },
                     {
                         "quote": "When I was a boy and I would see scary things in the news, my mother would say to me, \"Look for the helpers. You will always find people who are helping.\"",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "Love isn't a state of perfect caring. It is an active noun like struggle. To love someone is to strive to accept that person exactly the way he or she is, right here and now.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "Anyone who does anything to help a child in his life is a hero to me. ",
-                        "tags": "children, heroes, heroism"
+                        "tags": [
+                            "children",
+                            "heroes",
+                            "heroism"
+                        ]
                     },
                     {
                         "quote": "Anything that’s human is mentionable, and anything that is mentionable can be more manageable. When we can talk about our feelings, they become less overwhelming, less upsetting, and less scary. The people we trust with that important talk can help us know that we are not alone.",
-                        "tags": "communication, fear, friendship, inspirational, trauma, trust"
+                        "tags": [
+                            "communication",
+                            "fear",
+                            "friendship",
+                            "inspirational",
+                            "trauma",
+                            "trust",
+                            "election2016"
+                        ]
                     },
                     {
                         "quote": "If you could only sense how important you are to the lives of those you meet; how important you can be to the people you may never even dream of. There is something of yourself that you leave at every meeting with another person.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "We live in a world in which we need to share responsibility. It's easy to say \"It's not my child, not my community, not my world, not my problem.\" Then there are those who see the need and respond. I consider those people my heroes.",
-                        "tags": ""
+                        "tags": ["election2016"]
                     },
                     {
                         "quote": "In times of stress, the best thing we can do for each other is to listen with our ears and our hearts and to be assured that our questions are just as important as our answers.",
-                        "tags": ""
+                        "tags": ["election2016"]
                     },
                     {
                         "quote": "Often when you think you're at the end of something, you're at the beginning of something else.",
-                        "tags": ""
+                        "tags": ["election2016"]
                     },
                     {
                         "quote": "You rarely have time for everything you want in this life, so you need to make choices. And hopefully your choices can come from a deep sense of who you are.",
-                        "tags": ""
+                        "tags": ["election2016"]
                     },
                     {
                         "quote": "Mutual caring relationships require kindness and patience, tolerance, optimism, joy in the other's achievements, confidence in oneself, and the ability to give without undue thought of gain.",
-                        "tags": "inspirational, relationships"
+                        "tags": [
+                            "inspirational",
+                            "relationships"
+                        ]
                     },
                     {
                         "quote": "Forgiveness is a strange thing. It can sometimes be easier to forgive our enemies than our friends. It can be hardest of all to forgive people we love. Like all of life's important coping skills, the ability to forgive and the capacity to let go of resentments most likely take root very early in our lives.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "The greatest gift you ever give is your honest self.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "I hope you're proud of yourself for the times you've said \"yes,\" when all it meant was extra work for you and was seemingly helpful only to someone else.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "Whether we're a preschooler or a young teen, a graduating college senior or a retired person, we human beings all want to know that we're acceptable, that our being alive somehow makes a difference in the lives of others.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "We need to help people to discover the true meaning of love. Love is generally confused with dependence. Those of us who have grown in true love know that we can love only in proportion to our capacity for independence.",
-                        "tags": "independence, inspirational, love"
+                        "tags": [
+                            "independence",
+                            "inspirational",
+                            "love"
+                        ]
                     },
                     {
                         "quote": "The child is in me still and sometimes not so still.",
-                        "tags": "inner-child"
+                        "tags": [
+                            "inner-child"
+                        ]
                     },
                     {
                         "quote": "Who we are in the present includes who we were in the past.",
-                        "tags": "character, inspirational, personal-development"
+                        "tags": [
+                            "character",
+                            "inspirational",
+                            "personal-development",
+                            "election2016"
+                        ]
                     },
                     {
                         "quote": "The connections we make in the course of a life--maybe that's what heaven is.",
-                        "tags": "death, heaven, life"
+                        "tags": [
+                            "death",
+                            "heaven",
+                            "life"
+                        ]
                     },
                     {
                         "quote": "It's very dramatic when two people come together to work something out. It's easy to take a gun and annihilate your opposition, but what is really exciting to me is to see people with differing views come together and finally respect each other.",
-                        "tags": "guns, inspirational, respect, working-together"
+                        "tags": [
+                            "guns",
+                            "inspirational",
+                            "respect",
+                            "working-together",
+                            "election2016"
+                        ]
                     },
                     {
                         "quote": "The thing I remember best about successful people I've met all through the years is their obvious delight in what they're doing and it seems to have very little to do with worldly success. They just love what they're doing, and they love it in front of others.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "Love and trust, in the space between what’s said and what's heard in our life, can make all the difference in the world.",
-                        "tags": ""
+                        "tags": ["election2016"]
                     },
                     {
                         "quote": "In the external scheme of things, shining moments are as brief as the twinkling of an eye, yet such twinklings are what eternity is made of -- moments when we human beings can say \"I love you, \"I'm proud of you,\" \"I forgive you,\" \"I'm grateful for you.\" That's what eternity is made of: invisible imperishable good stuff.",
-                        "tags": "eternity, inspirational"
+                        "tags": [
+                            "eternity",
+                            "inspirational",
+                            "election2016"
+                        ]
                     },
                     {
                         "quote": "The kingdom of God is for the broken hearted",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "Discovering the truth about ourselves is a lifetime’s work, but it’s worth the effort.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "There are three ways to ultimate success:<br />The first way is to be kind.<br />The second way is to be kind.<br />The third way is to be kind.",
-                        "tags": ""
+                        "tags": ["election2016"]
                     },
                     {
                         "quote": "When we treat children's play as seriously as it deserves, we are helping them feel the joy that's to be found in the creative spirit. It's the things we play with and the people who help us play that make a great difference in our lives.",
-                        "tags": ""
+                        "tags": []
                     },
                     {
                         "quote": "Life is for service.",
-                        "tags": "life,service"
+                        "tags": [
+                            "life",
+                            "service"
+                        ]
                     },
                     {
                         "quote": "Little by little we human beings are confronted with situations that give us more and more clues that we are not perfect.",
-                        "tags": ""
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "It's not the honors and the prizes and the fancy outsides of life which ultimately nourish our souls. It's the knowing that we can be trusted, that we never have to fear the truth, that the bedrock of our very being is good stuff.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "When I was a boy and I would see scary things in the news, my mother would say to me, \"Look for the helpers. You will always find people who are helping.\" To this day, especially in times of \"disaster,\" I remember my mother's words and I am always comforted by realizing that there are still so many helpers – so many caring people in this world.",
+                        "tags": [
+                            "caring",
+                            "childhood",
+                            "children",
+                            "disaster",
+                            "fear",
+                            "helping"
+                        ]
+                    },
+                    {
+                        "quote": "At the center of the Universe is a loving heart that continues to beat and that wants the best for every person. Anything that we can do to help foster the intellect and spirit and emotional growth of our fellow human beings, that is our job. Those of us who have this particular vision must continue against all odds. Life is for service.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "There was a story going around about the Special Olympics. For the hundred-yard dash, there were nine contestants, all of them so-called physically or mentally disabled. All nine of them assembled at the starting line and, at the sound of the gun, they took off. But one little boy didn't get very far. He stumbled and fell and hurt his knee and began to cry. The other eight children heard the boy crying. They slowed down, turned around, and ran back to him--every one of them ran back to him. The little boy got up, and he and the rest of the runners linked their arms together and joyfully walked to the finish line.<\/p><p>They all finished the race at the same time. And when they did, everyone in the stadium stood up and clapped and whistled and cheered for a long, long time. And you know why? Because deep down we know that what matters in this life is more than winning for ourselves. What really matters is helping others win, too, even if it means slowing down and changing our course now and then.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "It's a beautiful day in this neighborhood,<br />A beautiful day for a neighbor.<br />Would you be mine?<br />Could you be mine?...<\/p><p>It's a neighborly day in this beauty wood,<br />A neighborly day for a beauty.<br />Would you be mine?<br />Could you be mine?...<\/p><p>I've always wanted to have a neighbor just like you.<br />I've always wanted to live in a neighborhood with you.<\/p><p>So, let's make the most of this beautiful day.<br />Since we're together we might as well say:<br />Would you be mine?<br />Could you be mine?<br />Won't you be my neighbor?<\/p><p>Won't you please,<br />Won't you please?<br />Please won't you be my neighbor?",
+                        "tags": [
+                            "childhood",
+                            "inspirational",
+                            "love",
+                            "mister-rogers-neighborhood",
+                            "television",
+                            "election2016"
+                        ]
+                    },
+                    {
+                        "quote": "What's been important in my understanding of myself and others is the fact that each one of us is so much more than any one thing. A sick child is much more than his or her sickness.<br />A person with a disability is much, much more than a handicap. A pediatrician is more than a medical doctor. You're MUCH more than your job description or your age or your income or your output.",
+                        "tags": [
+                            "acceptance"
+                        ]
+                    },
+                    {
+                        "quote": "Knowing that we can be loved exactly as we are gives us all the best opportunity for growing into the healthiest of people.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "There is no normal life that is free of pain. It's the very wrestling with our problems that can be the impetus for our growth.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "When we love a person, we accept him or her exactly as is: the lovely with the unlovely, the strong with the fearful, the true mixed in with the façade, and of course, the only way we can do it is by accepting ourselves that way.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Confronting our feelings and giving them appropriate expression always takes strength, not weakness. It takes strength to acknowledge our anger, and sometimes more strength yet to curb the aggressive urges anger may bring and to channel them into nonviolent outlets. It takes strength to face our sadness and to grieve and to let our grief and our anger flow in tears when they need to. It takes strength to talk about our feelings and to reach out for help and comfort when we need it.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "I'm proud of you for the times you came in second, or third, or fourth, but what you did was the best you have ever done",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Peace means far more than the opposite of war.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "I don't think anyone can grow unless he's loved exactly as he is now, appreciated for what he is rather than what he will be.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "I believe that appreciation is a holy thing--that when we look for what's best in a person we happen to be with at the moment, we're doing what God does all the time. So in loving and appreciating our neighbor, we're participating in something sacred.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "The world needs a sense of worth, and it will achieve it only by its people feeling that they are worthwhile.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "Love is like infinity: You can't have more or less infinity, and you can't compare two things to see if they're \"equally infinite.\" Infinity just is, and that's the way I think love is, too.",
+                        "tags": [
+                            "love"
+                        ]
+                    },
+                    {
+                        "quote": "How great it is when we come to know that times of disappointment can be followed by joy; that guilt over falling short of our ideals can be replaced by pride in doing all that we can; and that anger can be channeled into creative achievements... and into dreams that we can make come true.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "The only thing evil can’t stand is forgiveness.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "There's no \"should\" or \"should not\" when it comes to having feelings. They're part of who we are and their origins are beyond our control. When we can believe that, we may find it easier to make constructive choices about what to do with those feelings.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Solitude is different from loneliness, and it doesn't have to be a lonely kind of thing.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Whatever we choose to imagine can be as private as we want it to be. Nobody knows what you're thinking or feeling unless you share it.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Try your best to make goodness attractive. That's one of the toughest assignments you'll ever be given.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "It's a mistake to think that we have to be lovely to be loved by human beings or by God",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Some days, doing \"the best we can\" may still fall short of what we would like to be able to do, but life isn't perfect on any front-and doing what we can with what we have is the most we should expect of ourselves or anyone else.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "Feeling good about ourselves is essential in our being able to love others.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "A young apprentice applied to a master carpenter for a job. The older man asked him, \"Do you know your trade?\" \"Yes, sir!\" the young man replied proudly. \"Have you ever made a mistake?\" the older man inquired. \"No, sir!\" the young man answered, feeling certain he would get the job. \"Then there's no way I'm going to hire you,\" said the master carpenter, \"because when you make one, you won't know how to fix it.\"",
+                        "tags": []
+                    },
+                    {
+                        "quote": "It's really easy to fall into the trap of believing that what we do is more important than what we are. Of course, it's the opposite that's true: What we are ultimately determines what we do!",
+                        "tags": []
+                    },
+                    {
+                        "quote": "I like to compare the holiday season with the way a child listens to a favorite story. The pleasure is in the familiar way the story begins, the anticipation of familiar turns it takes, the familiar moments of suspense, and the familiar climax and ending.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Often out of periods of losing come the greatest strivings toward a new winning streak.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "I believe that at the center of the universe there dwells a loving spirit who longs for all that’s best in all of creation, a spirit who knows the great potential of each planet as well as each person, and little by little will love us into being more than we ever dreamed possible. That loving spirit would rather die than give up on any one of us.",
+                        "tags": [
+                            "christianity",
+                            "god",
+                            "love"
+                        ]
+                    },
+                    {
+                        "quote": "Sometimes people are good, and they do just what they should. But the very same people who are good sometimes are the very same people who are bad sometimes. It's funny but it's true. Its the same isn't it, for me and . . .",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Music is the one art we all have inside. We may not be able to play an instrument, but we can sing along or clap or tap our feet. Have you ever seen a baby bouncing up and down in the crib in time to some music? When you think of it, some of that baby's first messages from his or her parents may have been lullabies, or at least the music of their speaking voices. All of us have had the experience of hearing a tune from childhood and having that melody evoke a memory or a feeling. The music we hear early on tends to stay with us all our lives.",
+                        "tags": [
+                            "childhood",
+                            "childhood-memories",
+                            "music"
+                        ]
+                    },
+                    {
+                        "quote": "I'm fairly convinced that the Kingdom of God is for the broken-hearted. You write of 'powerlessness.' Join the club, we are not in control. God is.",
+                        "tags": [
+                            "broken-hearted",
+                            "control",
+                            "god",
+                            "kingdom-of-god",
+                            "power"
+                        ]
+                    },
+                    {
+                        "quote": "Anyone who has ever been able to sustain good work has had at least one person--and often many--who have believed in him or her. We just don't get to be competent human beings without a lot of different investments from others.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Most of us, I believe, admire strength. It's something we tend to respect in others, desire for ourselves, and wish for our children. Sometimes, though, I wonder if we confuse strength with other words—like 'aggression' and even 'violence'. Real strength is neither male nor female; but it is, quite simply, one of the finest characteristics that a human being can possess.",
+                        "tags": [
+                            "strength",
+                            "election2016"
+                        ]
+                    },
+                    {
+                        "quote": "Everyone longs to be loved. And the greatest thing we can do is to let people know that they are loved and capable of loving.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "The values we care about the deepest, and the movements within society that support those values, command our love. When those things that we care about so deeply become endangered, we become enraged. And what a healthy thing that is! Without it, we would never stand up and speak out for what we believe.",
+                        "tags": [
+                            "inspirational",
+                            "election2016"
+                        ]
+                    },
+                    {
+                        "quote": "Play is often talked about as if it were a relief from serious learning. But for children play is serious learning. Play is really the work of childhood.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "One of the universal fears of childhood is the fear of not having value in the eyes of the people whom we admire so much.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "We speak with more than our mouths. We listen with more than our ears.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Life is deep and simple, and what our society gives us is shallow and complicated.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "Real strength has to do with helping others.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "[I]f we can bring our children understanding, comfort, and hopefulness when they need this kind of support, then they are more likely to grow into adults who can find these resources within themselves later on. ",
+                        "tags": [
+                            "children",
+                            "parenting"
+                        ]
+                    },
+                    {
+                        "quote": "As human beings, our job in life is to help people realize how rare and valuable each one of us really is, that each of us has something that no one else has- or ever will have- something inside that is unique to all time. It's our job to encourage each other to discover that uniqueness and to provide ways of developing its expression.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "There's a world of difference between insisting on someone's doing something and establishing an atmosphere in which that person can grow into wanting to do it.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "You can't really love someone else unless you really love yourself first.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "It's good to be curious about many things.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Mutually caring relationships require kindness and patience, tolerance, optimism, joy in the other's achievements, confidence in oneself, and the ability to give without undue thought of gain. We need to accept the fact that it's not in the power of any human being to provide all these things all the time. for any of us, mutually caring relationships will always include some measure of unkindness and impatience, intolerance, pessimism, envy, self-doubt, and disappointment.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "It's not the honors and the prizes and the fancy outsides of life that ultimately nourish our souls. It's the knowing that we can be trusted, that we never have to fear the truth, that the bedrock of our very being is firm.",
+                        "tags": [
+                            "success-in-life"
+                        ]
+                    },
+                    {
+                        "quote": "Being able to resolve conflicts peacefully is one of the greatest strengths we can give our children.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Kenneth Koch once said, \"You aren’t just the age you are. You are all the ages you ever have been!\"",
+                        "tags": []
+                    },
+                    {
+                        "quote": "I've often hesitated in beginning a project because I've thought, \"It'll never turn out to be even remotely like the good idea I have as I start.\" I could just \"feel\" how good it could be. But I decided that, for the present, I would create the best way I know how and accept the ambiguities.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "How many times have you noticed that it’s the little quiet moments in the midst of life that seem to give the rest extra-special meaning?",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Listening and trying to understand the needs of those we would communicate with seems to me to be the essential prerequisite of any real communication. And we might as well aim for real communication.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "It's the people we love the most who can make us feel the gladdest ... and the maddest! Love and anger are such a puzzle!",
+                        "tags": []
+                    },
+                    {
+                        "quote": "All of us, at some time or other, need help. Whether we’re giving or receiving help, each one of us has something valuable to bring to this world. That’s one of the things that connects us as neighbors—in our own way, each one of us is a giver and a receiver.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "It’s very important, no matter what you may do professionally, to keep alive some of the healthy interests of your youth. Children’s play is not just kids’ stuff. Children’s play is rather the stuff of most future inventions.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "You are a very special person. There is only one like you in the whole world. There's never been anyone exactly like you before, and there will never be again. Only you. And people can like you exactly as you are.",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "You know, I think everybody longs to be loved, and longs to know that he or she is lovable. And consequently, the greatest thing we can do is to help somebody know that they are loved and capable of loving.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "One of the strongest things I have had to wrestle with in my life is the significance of the longing for perfection in oneself and in the people bound to the self by friendship or parenthood or childhood.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "You can think about things and make believe. All you have to do is think and they'll grow.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "In a young child's mind, parents probably condone what's on the television, just like they choose what's in the refrigerator or on the stove. That's why we who make television for children must be especially careful.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Who you are inside is what helps you make and do everything in life.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "I realize that it isn't very fashionable to talk about some things being holy; nevertheless, if we ever want to rid ourselves of personal and corporate emptiness, brokenness, loneliness, and fear, we have to allow ourselves room for that which we can not see, hear, touch , or control.",
+                        "tags": [
+                            "christianity"
+                        ]
+                    },
+                    {
+                        "quote": "I can put on a hat, or put on a coat,<Br />Or wear a pair of glasses or sail a boat. I can change all my names and find a place to hide. I can do most anything, but I'm still myself inside. I can go far away, or dream of anything, Or wear a scary costume or act like a king. I can change all my names and find a place to hide. I can do almost anything, but I'm still myself. I'm still myself. I'm still myself inside.",
+                        "tags": [
+                            "self-love"
+                        ]
+                    },
+                    {
+                        "quote": "Confronting our feelings and giving them appropriate expression always takes strength, not weakness. It takes strength to acknowledge our anger, and sometimes more strength yet to curb the aggressive urges anger may bring and to channel them into nonviolent outlets. It takes strength to face our sadness and to grieve and to let our grief and our anger flow in tears when they need to. It takes strength to talk about our feelings and to reach out for help and comfort when we need it.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Jane Addams, writing about her Twenty Years at Hull House, said,\"People did not want to hear about simple things. They wanted to hear about great things—simply told.\"",
+                        "tags": ["election2016"]
+                    },
+                    {
+                        "quote": "We all have different gifts, so we all have different ways of saying to the world who we are.",
+                        "tags": [
+                            "self-love"
+                        ]
+                    },
+                    {
+                        "quote": "I must be an emotional archaeologist because I keep looking for the roots of things, particularly the roots of behavior and why I feel certain ways about certain things.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "All our lives, we rework the things from our childhood, like feeling good about ourselves, managing our angry feelings, being able to say good-bye to people we love.",
+                        "tags": []
+                    },
+                    {
+                        "quote": "Listening is where love begins: listening to ourselves and then to our neighbors.",
+                        "tags": [
+                            "communicating",
+                            "communication",
+                            "listening",
+                            "love",
+                            "election2016"
+                        ]
+                    },
+                    {
+                        "quote": "Taking care is one way to show your love. Another way is letting people take good care of you when you need it.",
+                        "tags": [
+                            "care",
+                            "love",
+                            "relationships"
+                        ]
+                    },
+                    {
+                        "quote": "Pretending doesn't require expensive toys.",
+                        "tags": [
+                            "creativity",
+                            "imagination",
+                            "play",
+                            "pretending"
+                        ]
+                    },
+                    {
+                        "quote": "Love and success, always in that order. It's that simple AND that difficult.",
+                        "tags": [
+                            "love",
+                            "success",
+                            "election2016"
+                        ]
+                    },
+                    {
+                        "quote": "Well, life isn't cheap. It's the greatest mystery of any millennium, and television needs to do all it can to broadcast that...to show and tell what the good in life is all about.<\/p><p>But how do we make goodness attractive? By doing whatever we can do to bring courage to those whose lives move near our own--by treating our 'neighbor' at least as well as we treat ourselves and allowing that to inform everything that we produce.<\/p><p>Who in your life has been such a servant to you? Who has helped you love the good that grows within you? Let's just take ten seconds to think of some of those people who have loved us and wanted what was best for us in life, those who have encouraged us to become who we are tonight - just ten seconds of silence.<\/p><p>No matter where they are, either here or in heaven, imagine how pleased those people must be to know that you thought of them right now.",
+                        "tags": []
                     }
                 ];
+
+                /**
+                 * Handle URL parameters to allow the user to pass in tags and reduce the quotes
+                 * array to only the quotes that have given tags
+                 */
+                var urlParams;
+                (window.onpopstate = function () {
+                    var match,
+                        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+                        search = /([^&=]+)=?([^&]*)/g,
+                        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+                        query  = window.location.search.substring(1);
+
+                    urlParams = {};
+                    while (match = search.exec(query))
+                       urlParams[decode(match[1])] = decode(match[2]);
+                })();
+                // Tags needs to be in the URL and have some sort of value...
+                if( urlParams['tags'] && urlParams['tags'].length ) {
+                    var tags = urlParams['tags'].split(','); // ...split using a comma for multiple tags
+                    tagQuotes = quotes.filter(function(arr) {
+                        return array_intersect(tags,arr.tags).length;
+                    });
+                    // Only filter quotes array down if there were results, otherwise use the full array
+                    quotes = tagQuotes.length ? tagQuotes : quotes;
+                }
+
+                // Choose a random theme and a random quote
                 var themes = ['blue','purple','deep-purple','cyan','teal','amber'];
                 var chosenTheme = themes[Math.floor(Math.random() * themes.length)];
                 var chosenQuote = quotes[Math.floor(Math.random() * quotes.length)];
                 document.getElementsByClassName('random__quote')[0].innerHTML = "<p>" + chosenQuote.quote + "</p>";
                 document.body.classList.remove('theme--default');
                 document.body.classList.add('theme--' + chosenTheme);
+
+
+            </script>
+            <script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-87122361-1', 'auto');
+              ga('send', 'pageview');
+
             </script>
         </div>
     </body>
